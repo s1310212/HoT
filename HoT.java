@@ -3,6 +3,7 @@ import java.util.*;
 public class HoT{
     public static void main(String[] args){
         HoT test = new HoT();
+        test.Greet();
         test.Toss();
 
     }
@@ -24,6 +25,14 @@ public class HoT{
             }else System.out.println("error");
         }
         System.out.println("Heads: " + num_h + "," + "Tails: " + num_t);
+    }
+
+    void Greet(){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Who are you?");
+        String name = sc.nextLine();
+        System.out.println("Hello, " + name + "!");
     }
 }
 
