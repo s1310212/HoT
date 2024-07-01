@@ -4,9 +4,10 @@ public class HoT{
     public static void main(String[] args){
         boolean check;
         HoT test = new HoT();
+        String name = test.Greet();
         check = test.Toss();
-        if(check) System.out.println("You won!");
-        else System.out.println("You lost.");
+        if(check) System.out.println(name + " won!");
+        else System.out.println(name +  "lost.");
 
     }
 
@@ -31,5 +32,15 @@ public class HoT{
         else if(num_h < num_t) return false;
         else return false;
     }
+
+    String Greet(){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Who are you?");
+        String name = sc.nextLine();
+        System.out.println("Hello, " + name + "!");
+        return name;
+    }
+    
 }
 
