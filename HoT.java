@@ -2,12 +2,15 @@ import java.util.*;
 
 public class HoT{
     public static void main(String[] args){
+        boolean check;
         HoT test = new HoT();
-        test.Toss();
+        check = test.Toss();
+        if(check) System.out.println("You won!");
+        else System.out.println("You lost.");
 
     }
 
-    void Toss(){
+    boolean Toss(){
         Random rand = new Random();
         int num_try = 3;
         int num_h = 0, num_t = 0;
@@ -24,6 +27,9 @@ public class HoT{
             }else System.out.println("error");
         }
         System.out.println("Heads: " + num_h + "," + "Tails: " + num_t);
+        if(num_h > num_t) return true;
+        else if(num_h < num_t) return false;
+        else return false;
     }
 }
 
